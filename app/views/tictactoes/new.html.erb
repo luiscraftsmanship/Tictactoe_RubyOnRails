@@ -1,0 +1,19 @@
+<% provide(:title, 'Bienvenido') %>
+<div class="center">  
+  <div class="row">
+    <div class="span5 offset1">
+      <h1>Pincelancer Tictactoe app</h1>
+      <h2>Bienvenido!</h2>  
+      <p>Un juego de Tic Tac Toe.</p>
+      <p>Humano vs CPU.</p>  
+      <p>Jugar ahora mismo! </p>     
+      </br>
+      <%= button_to "Empezar juego!", {:action => :create}, :method => :post, :class => 'btn btn-large btn-primary' %>
+    </div>
+    <div class="span4 offset1">
+      <%= render 'shared/emptyboard' %>
+    </div>
+    <div class="span1">
+    </div>    
+  </div>
+</div>

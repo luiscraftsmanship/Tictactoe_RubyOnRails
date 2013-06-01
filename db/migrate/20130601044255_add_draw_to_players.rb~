@@ -1,0 +1,4 @@
+class AddDrawToPlayers < ActiveRecord::Migration
+  def change
+  end
+end

@@ -1,0 +1,4 @@
+class AddLoseToPlayers < ActiveRecord::Migration
+  def change
+  end
+end

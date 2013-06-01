@@ -1,0 +1,88 @@
+<h1>Tic Tac Toe</h1>
+<div class="player-turn-marker"><%= turn(@tictactoe) %></div>
+<div class="player-1-turn player-display"><%= @tictactoe.players[0].name %>, realizar su movimiento</div>
+<div class="player-2-turn player-display"><%= @tictactoe.players[1].name %> esta pensado...</div>
+</br>
+</br>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>
+        <div class="center">Nombre</div>
+      </th>
+      <th>
+        <div class="center">Marca</div>
+      </th>
+      <th>
+        <div class="center">Ganar</div>
+      </th>
+      <th>
+        <div class="center">Perder</div>
+      </th>
+      <th>
+        <div class="center">Empate</div>
+      </th>                  
+    </tr>
+  </thead>
+  <tbody>
+  	<tr>
+      <td>
+        <div class="center">
+          <%= @tictactoe.players[0].name %>
+        </div>
+      </td>
+      <td>     
+        <div class="center">
+          <%= image_tag "x.jpg", :size => "25x25" %>
+        </div>
+      </td>
+      <td>     
+        <div class="center">
+          <%= @tictactoe.players[0].win %>
+        </div>
+      </td>
+      <td>     
+        <div class="center">
+          <%= @tictactoe.players[0].lose %>
+        </div>
+      </td>
+      <td>     
+        <div class="center">
+          <%= @tictactoe.players[0].draw %>
+        </div>
+      </td>                  
+    </tr>
+    <tr>
+      <td>
+        <div class="center">
+          <%= @tictactoe.players[1].name %>
+        </div>
+      </td>
+      <td>
+        <div class="center">
+          <%= image_tag "o.jpg", :size => "25x25" %>
+        </div>
+      </td>
+      <td>
+        <div class="center">
+          <%= @tictactoe.players[1].win %>
+        </div>
+      </td>
+      <td>
+        <div class="center">
+          <%= @tictactoe.players[1].lose %>
+        </div>
+      </td>
+      <td>
+        <div class="center">
+          <%= @tictactoe.players[1].draw %>
+        </div>
+      </td>                  
+    </tr>
+  </tbody>
+</table>
+</br>
+
+<div class="cpu-move-marker"><%= computer_move(@tictactoe) %></div>
+
+

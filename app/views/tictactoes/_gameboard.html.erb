@@ -1,0 +1,62 @@
+<table class="table table-bordered">
+  <tr>  
+    <td>
+      <div class="center square0">
+        <%= link_to(image_tag(return_image(@tictactoe, 0), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square1">
+        <%= link_to(image_tag(return_image(@tictactoe, 1), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square2">
+        <%= link_to(image_tag(return_image(@tictactoe, 2), :size => "100x100"), "#") %>
+      </div>
+    </td>
+  </tr>
+  <tr>  
+    <td>
+      <div class="center square3">
+        <%= link_to(image_tag(return_image(@tictactoe, 3), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square4">
+        <%= link_to(image_tag(return_image(@tictactoe, 4), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square5">
+        <%= link_to(image_tag(return_image(@tictactoe, 5), :size => "100x100"), "#") %>
+      </div>
+    </td>
+  </tr>
+  <tr>  
+    <td>
+      <div class="center square6">
+        <%= link_to(image_tag(return_image(@tictactoe, 6), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square7">
+        <%= link_to(image_tag(return_image(@tictactoe, 7), :size => "100x100"), "#") %>
+      </div>
+    </td>
+    <td>
+      <div class="center square8">
+        <%= link_to(image_tag(return_image(@tictactoe, 8), :size => "100x100"), "#") %>
+      </div>
+    </td>
+  </tr>    
+</table>
+
+
+<%= form_for(@tictactoe) do |f| %> 
+  <%= f.fields_for :squares, @square do |e| %>
+    <%= e.hidden_field :value %>
+  <% end %>
+<% end %>
+
+

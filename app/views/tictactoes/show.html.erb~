@@ -1,0 +1,27 @@
+<% provide(:title, 'Results') %>
+<div class="center">  
+  <div class="row">
+    <div class="span5 offset1">
+      <h1>Tic Tac Toe Resultados</h1>
+      <div class="player-winner-marker"><%= p_winner(@tictactoe) %></div>
+      <div class="player-1-winner player-display"> Felicidades! <strong><%= @tictactoe.players[0].name %></strong>, you win!</div>
+      <div class="player-2-winner player-display"> Lo siento, <strong><%= @tictactoe.players[1].name %></strong> vencio</div>
+      <div class="player-no-winner player-display"> Juego finalizado en empate</div>
+      </br>
+      </br>
+      <div class="row">
+        <div class="reset span3">
+          <button type="button" class="btn btn-large btn-success">Probar de nuevo!</button>
+        </div>
+        <div class="span1">
+          <%= button_to "Quit.", root_path, :class => 'btn btn-large btn-primary' %>
+        </div>  
+      </div>
+    </div>
+    <div class="span4 offset1">
+      <%= render 'gameboard' %>
+    </div>
+    <div class="span1">
+    </div>    
+  </div>
+</div>

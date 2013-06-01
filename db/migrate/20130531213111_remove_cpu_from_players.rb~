@@ -1,0 +1,8 @@
+class RemoveCpuFromPlayers < ActiveRecord::Migration
+  def up
+    remove_column :players, :cpu
+  end
+
+  def down
+  end
+end

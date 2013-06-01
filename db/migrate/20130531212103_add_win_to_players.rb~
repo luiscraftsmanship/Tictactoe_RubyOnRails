@@ -1,0 +1,4 @@
+class AddWinToPlayers < ActiveRecord::Migration
+  def change
+  end
+end

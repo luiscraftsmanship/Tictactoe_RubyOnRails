@@ -1,0 +1,4 @@
+class TictactoesController < ApplicationController
+  def new
+  end
+end
